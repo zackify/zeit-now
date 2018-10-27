@@ -7,11 +7,20 @@ The GitHub Deployer for [Zeit](https://zeit.co/) task wraps the [Now CLI](https:
 ```
 workflow "Deploy on Now" {
   on = "push"
-  resolves = ["deploy"]
+  resolves = ["alias"]
 }
 
 action "deploy" {
   uses = "actions/zeit-now@master"
+  secrets = [
+    "ZEIT_TOKEN",
+  ]
+}
+
+action "alias" {
+  needs = ["deploy"]
+  uses = "actions/zeit-now@master"
+  args = "alias"
   secrets = [
     "ZEIT_TOKEN",
   ]
