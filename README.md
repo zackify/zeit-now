@@ -27,6 +27,8 @@ action "alias" {
 }
 ```
 
+For more examples, visit: [actions/example-zeit-now](https://github.com/actions/example-zeit-now).
+
 ### Secrets
 
 * `ZEIT_TOKEN` - **Required**. The token to use for authentication with the Zeit Now API ([more info](https://zeit.co/blog/introducing-api-tokens-management))
