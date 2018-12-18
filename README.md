@@ -1,10 +1,10 @@
 # GitHub Action for Zeit
 
-The GitHub Deployer for [Zeit](https://zeit.co/) task wraps the [Now CLI](https://github.com/zeit/now-cli) to enable common Now commands.
+This Action wraps the [Now CLI](https://github.com/zeit/now-cli) to enable common Now commands.
 
 ## Usage
 
-```
+```workflow
 workflow "Deploy on Now" {
   on = "push"
   resolves = ["alias"]
