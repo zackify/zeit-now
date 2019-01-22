@@ -12,6 +12,7 @@ workflow "Deploy on Now" {
 
 action "deploy" {
   uses = "actions/zeit-now@master"
+  args = "--public --no-clipboard deploy ./site > $HOME/deploy.txt"
   secrets = [
     "ZEIT_TOKEN",
   ]
@@ -20,7 +21,7 @@ action "deploy" {
 action "alias" {
   needs = ["deploy"]
   uses = "actions/zeit-now@master"
-  args = "alias"
+  args = "alias `cat /github/home/deploy.txt`"
   secrets = [
     "ZEIT_TOKEN",
   ]
