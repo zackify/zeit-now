@@ -21,7 +21,7 @@ action "deploy" {
 action "alias" {
   needs = ["deploy"]
   uses = "actions/zeit-now@master"
-  args = "alias `cat /github/home/deploy.txt`"
+  args = "alias `cat $HOME/deploy.txt`"
   secrets = [
     "ZEIT_TOKEN",
   ]
