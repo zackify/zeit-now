@@ -1,4 +1,4 @@
-# GitHub Action for Zeit
+# GitHub Action for ZEIT
 
 This Action wraps the [Now CLI](https://github.com/zeit/now-cli) to enable common Now commands.
 
@@ -31,7 +31,7 @@ For more examples, visit: [actions/example-zeit-now](https://github.com/actions/
 
 ### Secrets
 
-* `ZEIT_TOKEN` - **Required**. The token to use for authentication with the Zeit Now API ([more info](https://zeit.co/blog/introducing-api-tokens-management))
+* `ZEIT_TOKEN` - **Required**. The token to use for authentication with the ZEIT Now API ([more info](https://zeit.co/blog/introducing-api-tokens-management))
 
 ## License
 
