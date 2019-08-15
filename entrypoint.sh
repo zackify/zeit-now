@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-sh -c "now --token=$ZEIT_TOKEN $*"
+sh -c "$* --token=$ZEIT_TOKEN"
